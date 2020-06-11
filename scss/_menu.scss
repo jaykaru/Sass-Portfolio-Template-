@@ -8,7 +8,6 @@
     cursor: pointer;
     @include transistion-ease;
  
-
     &__burger {
         position: absolute;
         right: 0rem;
@@ -36,6 +35,19 @@
             height: 3px;
             background: set-text-color($primary-color);
             @include transistion-ease;
+        }
+        &.open {
+            transform: rotate(720deg);
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
         }
     }
 }
